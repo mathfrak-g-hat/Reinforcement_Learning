@@ -1,0 +1,12 @@
+Deep Q-learning agent - 2022-05-16 15:20:23.922871:
+- Execution over 15 episodes with 50 max. steps completed.
+- Total training time: 0:01:13.433628.
+- GIF recording compilation time: 0:01:22.294764 (name: LunarLander_test.gif).
+- DRL Hypeparameters: * learn_rate = 0.001,
+                      * gamma = 0.99,
+                      * eps_ini = 1.0,
+                      * eps_dec = 5e-05,
+                      * eps_min = 0.01,
+                      * batch_size = 64,
+                      * mem_size = 100000,
+                      * Saved model filename = dqn_attempt_0.00.h5.

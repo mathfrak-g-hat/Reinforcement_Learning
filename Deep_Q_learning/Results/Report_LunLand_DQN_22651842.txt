@@ -1,0 +1,15 @@
+Deep Q-learning agent - 2022-06-05 18:42:36.150672:
+- Execution over 50 episodes with 200 max. steps completed.
+- Total training time: 0:09:03.203768.
+- Average score over 50 episodes: -142.5847593663626.
+- Highest score: -15.010011247582526.
+- Lowest score: -511.2461056302482.
+- GIF recording compilation time: 0:10:37.911029 (name: LunarLander_test.gif).
+- DRL Hypeparameters: * learn_rate = 0.001,
+                      * gamma = 0.99,
+                      * eps_ini = 1.0,
+                      * eps_dec = 5e-05,
+                      * eps_min = 0.01,
+                      * batch_size = 64,
+                      * mem_size = 100000,
+                      * Saved model filename = dqn_target_1_50Ep_200Stps.h5.

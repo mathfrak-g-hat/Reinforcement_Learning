@@ -1,0 +1,38 @@
+avg_reward_len: 100
+batch_size: 128
+batches_per_epoch: 10000
+env: !!python/object:gym.wrappers.time_limit.TimeLimit
+  _action_space: null
+  _elapsed_steps: 0
+  _max_episode_steps: 1000
+  _metadata: null
+  _observation_space: null
+  _reward_range: null
+  env: !!python/object:gym.wrappers.order_enforcing.OrderEnforcing
+    _action_space: null
+    _disable_render_order_enforcing: false
+    _has_reset: true
+    _metadata: null
+    _observation_space: null
+    _reward_range: null
+    env: !!python/object:gym.envs.mujoco.half_cheetah_v4.HalfCheetahEnv
+      _ezpickle_args: !!python/tuple []
+      _ezpickle_kwargs:
+        ctrl_cost_weight: 0.1
+        exclude_current_positions_from_observation: true
+        forward_reward_weight: 1.0
+        reset_noise_scale: 0.1
+        xml_file: half_cheetah.xml
+eps_end: 0.02
+eps_last_frame: 150000
+eps_start: 1.0
+gamma: 0.98
+min_episode_reward: -21
+n_steps: 10
+policy_learning_rate: 0.0003
+q_learning_rate: 0.0003
+replay_size: 1000000
+seed: 101
+sync_rate: 10
+target_alpha: 0.005
+warm_start_size: 1000

@@ -1,0 +1,13 @@
+Linear trading agent TEST MODE - 2022-06-14 16:44:25.551295:
+- Execution over 1 episodes of 504 days.
+- Weights of Linear Trader used: Linear_Trader_AMZN_JPM_INTC_220610.h5.
+- Data tickers: ['AMZN', 'JPM', 'INTC'].
+- Test data start date: 2020-01-01 00:00:00.
+- Test data end date: 2021-12-31 00:00:00.
+- Total runtime: 0:00:25.523208.
+- Average return: -63.58092046162439.
+- Highest return: 1614.1025924682617.
+- Lowest return: -2115.239028930664.
+- DRL Hypeparameters: * learn_rate = 0.01,
+                      * gamma = 0.99,
+                      * epsilon = 0.1,

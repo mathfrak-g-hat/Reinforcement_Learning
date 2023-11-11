@@ -1,0 +1,13 @@
+Linear trading agent - 2022-06-10 22:08:37.434668:
+- Execution over 1 episodes over steps completed.
+- Data tickers: ['AMZN', 'JPM', 'INTC'].
+- Training data start date: 2010-01-01 00:00:00.
+- Training data end date: 2019-12-31 00:00:00.
+- Total training time: 0:05:39.994000.
+- Average return: 3337.618190427898.
+- Highest return: 15608.75664138794.
+- Lowest return: -889.2534055709839.
+- DRL Hypeparameters: * learn_rate = 0.01,
+                      * gamma = 0.99,
+                      * epsilon = 0.1,
+                      * Saved model filename = Linear_Trader_AMZN_JPM_INTC_220610.h5.

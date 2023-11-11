@@ -1,0 +1,61 @@
+action_noise_params:
+  action_noise_class: !!python/name:common.noise.OrnsteinUhlenbeckActionNoise ''
+  dt: 0.01
+  mu: 0.0
+  sigma: 0.15
+  theta: 0.2
+avg_score_len: 100
+batch_size: 128
+batches_per_epoch: 10000
+buffer_size: 1000000
+env: !!python/object:gym.wrappers.time_limit.TimeLimit
+  _action_space: null
+  _elapsed_steps: 0
+  _max_episode_steps: 1000
+  _metadata: null
+  _observation_space: null
+  _reward_range: null
+  env: !!python/object:gym.wrappers.order_enforcing.OrderEnforcing
+    _action_space: null
+    _disable_render_order_enforcing: false
+    _has_reset: true
+    _metadata: null
+    _observation_space: null
+    _reward_range: null
+    env: !!python/object:gym.envs.mujoco.half_cheetah_v4.HalfCheetahEnv
+      _ezpickle_args: !!python/tuple []
+      _ezpickle_kwargs:
+        ctrl_cost_weight: 0.1
+        exclude_current_positions_from_observation: true
+        forward_reward_weight: 1.0
+        reset_noise_scale: 0.1
+        xml_file: half_cheetah.xml
+gamma: 0.99
+max_episode_steps: 1000
+min_episode_score: 0.0
+n_policy_upd_steps: 2
+n_warm_start_steps: 10000
+num_workers: 6
+policy_arch_dict:
+  dropout_probs: []
+  layer_activation_fn: &id001 !!python/name:torch.nn.modules.activation.ReLU ''
+  net_arch:
+  - 256
+  - 256
+  output_activation_fn: !!python/name:torch.nn.modules.activation.Tanh ''
+  weight_init_mthd: Xavier_uniform
+  weight_init_seed: 123
+policy_lr: 0.0003
+policy_optimizer_class: &id002 !!python/name:torch.optim.adam.Adam ''
+q_net_arch_dict:
+  dropout_probs: []
+  layer_activation_fn: *id001
+  net_arch:
+  - 256
+  - 256
+  output_activation_fn: !!python/name:torch.nn.modules.linear.Identity ''
+  weight_init_mthd: Xavier_uniform
+  weight_init_seed: 123
+q_net_lr: 0.0003
+q_net_optimizer_class: *id002
+target_tau: 0.005
